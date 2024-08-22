@@ -9,16 +9,24 @@ Template for developing custom Marlin packages. Fork this repository and rename 
 ## Setup Instructions
 
 ### Container
-All commands are compatible and should be run inside the latest `gitlab-registry.cern.ch/muon-collider/muoncollider-docker/mucoll-sim:master-alma9` image (versions 2.8 and above).
+All commands are compatible and should be run inside the latest `gitlab-registry.cern.ch/muon-collider/mucoll-deploy/mucoll:2.9-alma9` image (versions 2.8 and above).
 
 #### Apptainer
+If you have CVMFS available, then it is recommended to use the unpacked version.
+
 ```bash
-apptainer shell --cleanenv gitlab-registry.cern.ch/muon-collider/muoncollider-docker/mucoll-sim:master-alma9
+apptainer shell --cleanenv /cvmfs/unpacked.cern.ch/gitlab-registry.cern.ch/muon-collider/mucoll-deploy/mucoll:2.9-alma9
+```
+
+Alternatively you can download and convert the Docker image yourself.
+
+```bash
+apptainer shell --cleanenv gitlab-registry.cern.ch/muon-collider/mucoll-deploy/mucoll:2.9-alma9
 ```
 
 #### Shifter
 ```bash
-shifter --image gitlab-registry.cern.ch/muon-collider/muoncollider-docker/mucoll-sim:master-alma9 /bin/bash
+shifter --image gitlab-registry.cern.ch/muon-collider/mucoll-deploy/mucoll:2.9-alma9 /bin/bash
 ```
 
 ### Build Instructions
