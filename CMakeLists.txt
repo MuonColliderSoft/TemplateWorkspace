@@ -18,7 +18,7 @@ FIND_PACKAGE( CLHEP REQUIRED )
 FIND_PACKAGE( k4geo REQUIRED )
 INCLUDE(GNUInstallDirs)
 
-set(CMAKE_CXX_STANDARD 17 CACHE STRING "")
+set(CMAKE_CXX_STANDARD 20 CACHE STRING "")
 
 ### DOCUMENTATION ###################################
 OPTION( INSTALL_DOC "Set to OFF to skip build/install Documentation" OFF )
